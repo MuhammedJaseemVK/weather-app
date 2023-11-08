@@ -23,7 +23,7 @@ function Api(props) {
     }, [location]);
 
     const [weather, setWeather] = useState({
-        name: '',
+        cityName: '',
         temp: '',
         humidity: '',
         windSpeed: '',
@@ -51,7 +51,7 @@ function Api(props) {
             const res = await response.json();
             console.log(res);
             setWeather({
-                name: res.name,
+                cityName: res.name,
                 temp: res.main.temp,
                 humidity: res.main.humidity,
                 windSpeed: res.wind.speed,
@@ -64,7 +64,10 @@ function Api(props) {
     }
 
     return (
-        <Weather weather={weather} getLocation={getLocation} getWeather={getWeather} />
+        <>
+            {weather.icon && < Weather weather={weather} />}
+
+        </>
     )
 }
 
