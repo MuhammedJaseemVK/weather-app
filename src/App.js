@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className='flex justify-center items-center h-screen bg-slate-900'>
-      <div className='flex mx-5 sm:mx-0 flex-col items-center gap-2 p-3 bg-gradient-to-b from-violet-600 to-indigo-600 rounded-md w-fit h-72 sm:h-80'>
+      <div className='flex mx-5 sm:mx-0 flex-col items-center gap-2 p-3 bg-gradient-to-b from-blue-600 to-cyan-600 rounded-xl w-fit h-72 sm:h-80'>
         <p className='font-bold text-white text-xl'>Weather App</p>
         <div className='flex gap-2 w-full'>
           <input type='text' className='rounded-xl px-2 w-full' placeholder='Enter a city' name='city' onKeyDown={handleKeyDown} value={city} onChange={handleOnChange} />
