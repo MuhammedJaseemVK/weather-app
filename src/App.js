@@ -26,7 +26,7 @@ function App() {
       <div className='flex flex-col items-center gap-2 p-3 bg-gradient-to-b from-violet-600 to-indigo-600 rounded-md w-80 h-80'>
         <p className='font-bold text-white text-xl'>Weather App</p>
         <div className='flex gap-2 w-full'>
-          <input type='text' className='rounded-xl px-2' placeholder='Enter a city' name='city' onKeyDown={handleKeyDown} value={city} onChange={handleOnChange} />
+          <input type='text' className='rounded-xl px-2 w-full' placeholder='Enter a city' name='city' onKeyDown={handleKeyDown} value={city} onChange={handleOnChange} />
           <img className='rounded-full bg-white p-1' src='assets/search.png' alt='search' onClick={()=>{setTrigger(trigger+1)}} />
         </div>
         <Api city={city} trigger={trigger} setCity={setCity} />
